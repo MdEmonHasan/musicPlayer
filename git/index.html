@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+</head>
+<body>
+
+    <section id="player_two">
+        <div class="main">
+            <p id="logo"><i class="fa fa-music"></i></p>
+            <!-- left part start -->
+            <div class="left">
+                <img src="" alt="" id="track_image">
+                <div class="volume">
+                    <p id="volume_show">90</p>
+                    
+                    
+                    <div id="volume_mute_problem" onclick="mute_sound()">
+                        <i class="fa fa-volume-up" id="volume_icon" onclick=""></i>
+                    </div>
+
+                    
+                    
+                    <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+                </div>
+            </div>
+            <!-- left part End -->
+
+            <!-- right part start -->
+            <div class="right">
+                <div class="show_song_no">
+                    <p id="present">1</p>
+                    <p></p>
+                    <p id="total">5</p>
+                </div>
+
+                <p id="title">title.mp3</p>
+                <p id="artist">artist name</p>
+
+                <div class="middle">
+                    <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward"></i></button>
+
+
+                    <button onclick="justplay()" id="play"><i class="fa fa-play"></i></button>
+
+                    <button onclick="next_song()" id="next"><i class="fa fa-step-forward"></i></button>
+                </div>
+
+
+
+
+                <div class="duration">
+                    <input type="range" min="0" max="100" value="0" onchange="change_duration()" id="duration_slider">
+                </div>
+
+                <button id="auto" onclick="autoplay_switch()">Auto play <i class="fa fa-circle-o-notch"></i></button>
+
+
+            </div>
+            <!-- right part End -->
+        </div>
+    </section>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/player_two.js"></script>
+</body>
